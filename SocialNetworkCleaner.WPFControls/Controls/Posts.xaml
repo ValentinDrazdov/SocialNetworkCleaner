@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="SocialNetworkCleaner.WPFControls.Controls.Posts"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SocialNetworkCleaner.WPFControls.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtFilter"  TextChanged="txtFilter_TextChanged"/>
+        <CheckBox x:Name="selectAllCheck" Grid.Row="0" Grid.Column="1"
+                  Unchecked="selectAllCheck_Checked" Checked="selectAllCheck_Checked">Выбрать все</CheckBox>
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2"
+                      ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <WrapPanel x:Name="wrapPosts"></WrapPanel>
+        </ScrollViewer>
+        
+    </Grid>
+</UserControl>

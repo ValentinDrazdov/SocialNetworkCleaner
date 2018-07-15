@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="SocialNetworkCleaner.WPFControls.Controls.Sources"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SocialNetworkCleaner.WPFControls.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtFilter" TextChanged="txtFilter_TextChanged"></TextBox>
+        <TabControl Grid.Row="1" Background="Black">
+            <TabItem >
+                <TabItem.Header>
+                    <Grid>
+                        <TextBlock>Группы</TextBlock>
+                    </Grid>
+                </TabItem.Header>
+                <Grid>
+                    <ScrollViewer  HorizontalAlignment="Stretch" 
+                      ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <WrapPanel x:Name="lstSourcesGroups" ></WrapPanel>
+                    </ScrollViewer>
+                </Grid>
+                
+            </TabItem>
+            <TabItem>
+
+                <TabItem.Header>
+                    <Grid>
+                        <TextBlock>Друзья</TextBlock>
+                    </Grid>
+                </TabItem.Header>
+                <ScrollViewer 
+                      ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <WrapPanel x:Name="lstSourcesFriends" ></WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+
+            
+        
+    </Grid>
+</UserControl>

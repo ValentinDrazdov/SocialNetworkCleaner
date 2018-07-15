@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="SocialNetworkCleaner.WPFControls.Controls.SourceHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SocialNetworkCleaner.WPFControls.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="36" d:DesignWidth="100">
+    <Border x:Name="brdr" BorderThickness="0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="18"></RowDefinition>
+                <RowDefinition Height="18"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="picGroupAvatar" Grid.Row="0" Grid.RowSpan="2"></Image>
+            <TextBlock x:Name="lbGroupName" Grid.Column="1" TextWrapping="WrapWithOverflow">Test</TextBlock>
+
+            <CheckBox x:Name="selectionCheck" Grid.Column="1" Grid.Row="1" Checked="selectionCheck_Checked" Unchecked="selectionCheck_Checked" />
+        </Grid>
+    </Border>
+   
+</UserControl>

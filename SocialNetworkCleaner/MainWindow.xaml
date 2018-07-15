@@ -1,0 +1,23 @@
+﻿<Window x:Class="SocialNetworkCleaner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SocialNetworkCleaner"
+        xmlns:components="clr-namespace:SocialNetworkCleaner.WPFControls.Controls;assembly=SocialNetworkCleaner.WPFControls"
+        mc:Ignorable="d"
+        Title="Social Network Cleaner: VK" Height="600" Width="940" WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <components:Authorization x:Name="partAuth" Grid.Row="0" AuthorizationSuccess="partAuth_AuthorizationSuccess"/>
+        <components:InformationActions x:Name="partActions" Grid.Row="1" InformationChanged="partActions_InformationChanged" />
+        <components:PostsSearcher x:Name="partPosts" Grid.Row="2" PostsSelected="partPosts_PostsSelected" PostShowed="partPosts_PostShowed"/>
+        <!-- <components:PostsSearcher x:Name="partPostsSearcher" /> -->
+        
+    </Grid>
+</Window>

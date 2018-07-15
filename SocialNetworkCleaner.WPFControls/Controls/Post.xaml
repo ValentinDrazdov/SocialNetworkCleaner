@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="SocialNetworkCleaner.WPFControls.Controls.Post"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SocialNetworkCleaner.WPFControls.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="600" HorizontalAlignment="Stretch">
+    <Border >
+        <Grid x:Name="gridPost">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <local:SourceHeader x:Name="partSource" Grid.Column="0" Grid.Row="0"
+                                SourceChecked="partSource_SourceChecked"></local:SourceHeader>
+
+            <ScrollViewer Grid.Row="1" Height="150"  ScrollViewer.CanContentScroll="True"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="lbPostText" TextWrapping="WrapWithOverflow"></TextBlock>
+                    <Image x:Name="picPostImage" Grid.Row="1" MouseDown="picPostImage_MouseDown"></Image>
+                </Grid>
+            </ScrollViewer>
+
+        </Grid>
+    </Border>
+    
+</UserControl>

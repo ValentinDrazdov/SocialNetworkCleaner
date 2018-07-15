@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SocialNetworkCleaner.WPFControls.Controls.Authorization"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SocialNetworkCleaner.WPFControls.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="18" d:DesignWidth="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="lbLogin" Text="Логин (телефон\почта):" />
+            <TextBox x:Name="txtLogin" Grid.Column="1"  Text=""/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="lbPassword" Text="Пароль:"/>
+            <PasswordBox x:Name="txtPass" Grid.Column="1" Password="" />
+        </Grid>
+        <Button x:Name="auth" Grid.Column="2" Click="auth_Click">
+            Авторизация
+        </Button>
+    </Grid>
+</UserControl>
